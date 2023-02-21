@@ -2,7 +2,7 @@
 \alias{modelData}
 \title{ Extract Dataset Created by specifyModel }
 \description{
-Extract from a \code{quantmod} object the
+Extract from a \code{cydquantmod} object the
 dataset created for use in modelling.
 
 specifyModel creates a \code{zoo} object for
@@ -17,7 +17,7 @@ of sources, into one model frame.
 modelData(x, data.window = NULL, exclude.training = FALSE)
 }
 \arguments{
-  \item{x}{ a \code{quantmod} object } 
+  \item{x}{ a \code{cydquantmod} object } 
   \item{data.window}{ a character vector of subset start
                       and end dates to return }
   \item{exclude.training}{ remove training period }

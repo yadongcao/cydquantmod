@@ -1,11 +1,11 @@
-library(quantmod)
+library(cydquantmod)
 
 # Tests for getSymbols
-test.web.endpoints <- Sys.getenv("QUANTMOD_TEST_WEB_ENDPOINTS")
+test.web.endpoints <- Sys.getenv("cydquantmod_TEST_WEB_ENDPOINTS")
 
 if (nzchar(test.web.endpoints)) {
   # Checks for Alpha Vantage
-  apikey <- Sys.getenv("QUANTMOD_AV_API_KEY")
+  apikey <- Sys.getenv("cydquantmod_AV_API_KEY")
   if (nzchar(apikey)) {
     ibm_daily_unadj <- getSymbols("IBM", src = "av", api.key = apikey,
       adjusted = FALSE, periodicity = "daily", auto.assign = FALSE)

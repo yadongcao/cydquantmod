@@ -1,7 +1,7 @@
 ********************************************************************************
 ********************************************************************************
 
-quantmod wishlist: as of Mar 21, 2008
+cydquantmod wishlist: as of Mar 21, 2008
 
 ********************************************************************************
 ********************************************************************************
@@ -11,7 +11,7 @@ quantmod wishlist: as of Mar 21, 2008
     1. charting and indicator overlays!
     2. building models
     3. testing models
-    4. extending quantmod
+    4. extending cydquantmod
     5. package/inteface preferences
   
   - Move to R-forge for devel tools [done]
@@ -33,7 +33,7 @@ FUNCTIONALITY:
 
   - tradeRule and tradeLog
 
-  - move all quantmod.OHLC to c('OHLC','xts','zoo') format - eventually move
+  - move all cydquantmod.OHLC to c('OHLC','xts','zoo') format - eventually move
     to new package all together [ done ]
 
 

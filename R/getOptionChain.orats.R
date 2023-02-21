@@ -1,5 +1,5 @@
 #
-#   quantmod: Quantitative Financial Modelling Framework
+#   cydquantmod: Quantitative Financial Modelling Framework
 #
 #   Copyright (C) 2021 Joshua M. Ulrich, Steve Bronder
 #

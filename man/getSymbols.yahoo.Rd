@@ -42,12 +42,12 @@ getSymbols.yahoo(Symbols,
 Meant to be called internally by \code{getSymbols} (see also).
 
 One of a few currently defined methods for loading
-data for use with \pkg{quantmod}.  Essentially a
+data for use with \pkg{cydquantmod}.  Essentially a
 simple wrapper to the underlying Yahoo! finance site's
 historical data download.
 }
 \section{Warning}{
-As of quantmod 0.4-9, \code{getSymbols.yahoo} has been patched to
+As of cydquantmod 0.4-9, \code{getSymbols.yahoo} has been patched to
 work with changes to Yahoo Finance, which also included the following
 changes to the raw data:
   \itemize{

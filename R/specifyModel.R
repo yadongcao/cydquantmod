@@ -1,6 +1,6 @@
 `sM` <-
 function(formula, na.rm = TRUE) {
-  nq <- new('quantmod')
+  nq <- new('cydquantmod')
   formula <- as.formula(formula)
   
   if(length(formula) < 3) stop('formula must have a lhs')
@@ -45,7 +45,7 @@ function(formula, na.rm = TRUE) {
 
 "specifyModel" <-
 function(formula,na.rm=TRUE) {
-  new.quantmod <- new("quantmod");
+  new.cydquantmod <- new("cydquantmod");
   formula <- as.formula(formula);
   dot.vars <- all.vars(formula);
     convert.vars <- function(vars) {
@@ -56,31 +56,31 @@ function(formula,na.rm=TRUE) {
 #    model.vars <- unlist(lapply(dot.vars,convert.vars));
 #    model.formula <- paste(model.vars[1],paste(model.vars[-1],collapse=' + '),sep=' ~ ');
 
-  new.quantmod@model.spec <- formula
-  new.quantmod@model.formula <- as.formula(gsub("[) ]","",gsub("[(,=:^'\"]",".",deparse(formula))));
-  new.quantmod@model.target <- as.character(new.quantmod@model.formula[[2]])
-  new.quantmod@build.inputs <- as.character(attr(terms(new.quantmod@model.formula),"term.labels"));
+  new.cydquantmod@model.spec <- formula
+  new.cydquantmod@model.formula <- as.formula(gsub("[) ]","",gsub("[(,=:^'\"]",".",deparse(formula))));
+  new.cydquantmod@model.target <- as.character(new.cydquantmod@model.formula[[2]])
+  new.cydquantmod@build.inputs <- as.character(attr(terms(new.cydquantmod@model.formula),"term.labels"));
   vars <- all.vars(formula);
-  new.quantmod@symbols <- vars;
-  new.quantmod@product <- vars[1]; 
-  new.quantmod <- getModelData(new.quantmod,na.rm=na.rm);
-  return(new.quantmod);
+  new.cydquantmod@symbols <- vars;
+  new.cydquantmod@product <- vars[1]; 
+  new.cydquantmod <- getModelData(new.cydquantmod,na.rm=na.rm);
+  return(new.cydquantmod);
 }
 
 
 "specifyModel.original" <-
 function(formula,na.rm=TRUE) {
-  new.quantmod <- new("quantmod");
+  new.cydquantmod <- new("cydquantmod");
   formula <- as.formula(formula);
-  new.quantmod@model.spec <- formula
-  new.quantmod@model.formula <- as.formula(gsub("\\)","",gsub("\\(",".",deparse(formula))));
-  new.quantmod@model.target <- deparse(formula[[2]]);
-  new.quantmod@build.inputs <- as.character(attr(terms(formula),"term.labels"));
+  new.cydquantmod@model.spec <- formula
+  new.cydquantmod@model.formula <- as.formula(gsub("\\)","",gsub("\\(",".",deparse(formula))));
+  new.cydquantmod@model.target <- deparse(formula[[2]]);
+  new.cydquantmod@build.inputs <- as.character(attr(terms(formula),"term.labels"));
   vars <- all.vars(formula);
-  new.quantmod@symbols <- vars;
-  new.quantmod@product <- vars[1]; 
-  new.quantmod <- getModelData(new.quantmod,na.rm=na.rm);
-  return(new.quantmod);
+  new.cydquantmod@symbols <- vars;
+  new.cydquantmod@product <- vars[1]; 
+  new.cydquantmod <- getModelData(new.cydquantmod,na.rm=na.rm);
+  return(new.cydquantmod);
 }
 
 # used potentially for chartSeries parsing - where a model.frame is unecessary

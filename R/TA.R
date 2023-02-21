@@ -79,7 +79,7 @@ function(ta, order=NULL, on=NA, legend='auto', yrange=NULL, ...) {
 #      lchob@passed.args$TA <- c(TA,chobTA)
 #      lchob@windows <- lchob@windows + ifelse(chobTA@new,1,0)
 #      do.call('chartSeries.chob',list(lchob))
-#      #quantmod:::chartSeries.chob(lchob)
+#      #cydquantmod:::chartSeries.chob(lchob)
 #      invisible(chobTA)
 #    } else {
      return(chobTA)

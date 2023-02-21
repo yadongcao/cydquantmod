@@ -2,18 +2,18 @@
 \alias{modelSignal}
 \title{ Extract Model Signal Object }
 \description{
-Extract model signal object from quantmodResults object
+Extract model signal object from cydquantmodResults object
 as an object of class \code{zoo}.
 }
 \usage{
 modelSignal(x)
 }
 \arguments{
-  \item{x}{ object of class \code{quantmodResults} }
+  \item{x}{ object of class \code{cydquantmodResults} }
 }
 \details{
 For use after a call to \code{tradeModel} to extract the generated
-signal of a given \code{quantmod} model. Normally this would
+signal of a given \code{cydquantmod} model. Normally this would
 not need to be called by the end user unless he was manually
 post processing the trade results.
 }

@@ -37,7 +37,7 @@ getSymbols.rda(Symbols,
 Meant to be called internally by \code{getSymbols} (see also).
 
 One of a few currently defined methods for loading
-data for use with \pkg{quantmod}.  Essentially a
+data for use with \pkg{cydquantmod}.  Essentially a
 simple wrapper to the underlying \R \code{load}.
 }
 \value{

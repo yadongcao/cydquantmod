@@ -95,7 +95,7 @@
   if(.body[6] == 'postFUN <- ""') .body[6] <- ''
   if(.body[4] == 'preFUN <- ""' ) .body[4] <- ''
   as.function(c(.formals,as.call(parse(text=.body))[[1]]),
-              envir = asNamespace('quantmod'))
+              envir = asNamespace('cydquantmod'))
 }
 
 ## Do not edit!  Some line numbers are referred to in newTA.

@@ -98,7 +98,7 @@ function(x)
   } else {
     # create a vector of colors
     if(x@multi.col) {
-      last.Closes <- as.numeric(quantmod::Lag(Closes))
+      last.Closes <- as.numeric(cydquantmod::Lag(Closes))
       last.Closes[1] <- Closes[1]
       # create vector of appropriate bar colors
       bar.col <- ifelse(Opens < Closes,

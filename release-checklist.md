@@ -1,4 +1,4 @@
-Release checklist for quantmod
+Release checklist for cydquantmod
 
 * Create GitHub Milestone
     * Associate all included issues with milestone
@@ -21,7 +21,7 @@ Release checklist for quantmod
     * Include user-facing changes, with GitHub issue number
     * Include GitHub username for users who create issues and/or PRs
 
-* Ensure [all CRAN checks](https://cran.r-project.org/web/checks/check_results_quantmod.html) are addressed
+* Ensure [all CRAN checks](https://cran.r-project.org/web/checks/check_results_cydquantmod.html) are addressed
 
 * Upload to CRAN
     * Add any new comments to the [CRAN comments](CRAN_comments.md) file

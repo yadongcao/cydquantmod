@@ -10,14 +10,14 @@ function(...,list=character(0),dir=NULL)
     models <- c(list,models.list);
     if(length(models)==0) {
         for(i in ls(1)) {
-            if(class(eval(parse(text=i)))[1]=='quantmod') models <- c(models,i);
+            if(class(eval(parse(text=i)))[1]=='cydquantmod') models <- c(models,i);
         }
     }
     if(length(models) > 0) {    
         for(obj in models) {
             model.obj <- eval(parse(text=obj));
             model.obj <- stripModelData(model.obj);
-            if(class(model.obj)[1]=='quantmod') 
+            if(class(model.obj)[1]=='cydquantmod') 
                 save(model.obj,file=paste(dir,model.obj@model.id,sep=''),envir=sys.frame(1));
                 
         }
@@ -42,7 +42,7 @@ function(...,dir=NULL)
             this <- eval(parse(text=thisName));
             this <- stripModelData(this);
             thisName <- this@model.id;
-            assign(thisName,this,.quantmodEnv);
+            assign(thisName,this,.cydquantmodEnv);
         }
     }
 

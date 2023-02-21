@@ -45,7 +45,7 @@ getSymbols.MySQL(Symbols,
 Meant to be called internally by \code{getSymbols} (see also)
 
 One of a few currently defined methods for loading data for
-use with \pkg{quantmod}. Its use requires the packages
+use with \pkg{cydquantmod}. Its use requires the packages
 \pkg{DBI} and \pkg{MySQL}, along with a running
 MySQL database with tables corresponding to the
 \code{Symbol} name.

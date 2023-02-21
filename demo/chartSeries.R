@@ -1,7 +1,7 @@
 # chartSeries demo
 # Jeffrey A. Ryan 2008
 
-require(quantmod)
+require(cydquantmod)
 
 chartSeries.demo <- function(x) {
   data(sample_matrix, package="xts")

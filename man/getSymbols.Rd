@@ -113,7 +113,7 @@ the user to assign the results himself. Note that only \emph{one} symbol
 at a time may be requested when auto assignment is disabled.
 
 Most, if not all, documentation and functionality related
-to model construction and testing in \pkg{quantmod}
+to model construction and testing in \pkg{cydquantmod}
 assumes that auto.assign remains set to TRUE and \code{env} is
 a valid environment object for the calls related to those functions.
 
@@ -169,11 +169,11 @@ As of version 0.4-0, the default \code{env} value is now
 the same functionality as the previous version. 
 
 While it is possible to load symbols as classes other
-than \code{zoo}, \pkg{quantmod} requires most, if not
+than \code{zoo}, \pkg{cydquantmod} requires most, if not
 all, data to be of class \code{zoo} or inherited
 from \code{zoo} - e.g. \code{xts}. The additional
 methods are meant mainly to be of use for those
-using the functionality outside of the \pkg{quantmod} workflow.
+using the functionality outside of the \pkg{cydquantmod} workflow.
 }
 \seealso{ \code{\link{getModelData}},\code{\link{specifyModel}},
 \code{\link{setSymbolLookup}},

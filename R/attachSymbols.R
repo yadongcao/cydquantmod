@@ -77,7 +77,7 @@ create.binding <- function(s, lsym, rsym, gsrc,
 attachSymbols <- function(DB=DDB_Yahoo(),pos=2,prefix=NULL,postfix=NULL, 
                           mem.cache=TRUE, file.cache=!mem.cache, cache.dir=tempdir())
 {
-  # this will be the function exported in quantmod  
+  # this will be the function exported in cydquantmod  
   if(!inherits(DB, 'DDB'))
     stop("DB must be of class 'DDB'")
   do.call(paste("attachSymbols",DB$src,sep="."), 
@@ -144,14 +144,14 @@ DDB_Yahoo <- function(prefix, postfix,
 #  Symbol_prefix
 #  Symbol_postfix
 #  Additional processing functions
-#  fetch mechanism (getSymbols in quantmod)
+#  fetch mechanism (getSymbols in cydquantmod)
 #  fetch args
 #  cache mechanism (file, memory, none)
 #  cache directory (applicable only to 'file' cache mechanism)
 #  cache rule: maximum object in memory vs. load costs, FIFO, Last Access/Aging
 #  refresh rule: function returning T/F (only for 'file' cache data) (time-stamps?)
 #
-# quantmod::createSymbolsDB(src='quantmod.com/symbols/yahoo_symbols.rda') 
-# quantmod::attachSymbols(db=createSymbolsDB())
-# quantmod::pkg/symbolDB/YAHOO_US_EQUITY
+# cydquantmod::createSymbolsDB(src='cydquantmod.com/symbols/yahoo_symbols.rda') 
+# cydquantmod::attachSymbols(db=createSymbolsDB())
+# cydquantmod::pkg/symbolDB/YAHOO_US_EQUITY
 

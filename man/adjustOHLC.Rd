@@ -34,8 +34,8 @@ calculate the new OHLC object prices.
 By default, \code{getSplits} and \code{getDividends} are
 called to retrieve the respective information. These
 may dispatch to custom methods following the \dQuote{.}
-methodology used by quantmod dispatch.  See \code{getSymbols}
-for information related to extending quantmod.
+methodology used by cydquantmod dispatch.  See \code{getSymbols}
+for information related to extending cydquantmod.
 This information is passed to
 \code{adjRatios} from the \pkg{TTR} package, and
 the resulting ratio calculations are used to adjust

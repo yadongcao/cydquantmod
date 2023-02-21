@@ -33,14 +33,14 @@ getSymbols.FRED(Symbols,
 Meant to be called internally by \code{getSymbols} (see also).
 
 One of many methods for loading
-data for use with \pkg{quantmod}.  Essentially a
+data for use with \pkg{cydquantmod}.  Essentially a
 simple wrapper to the underlying FRED
 data download site.
 
 Naming conventions must follow those as seen
 on the Federal Reserve Bank of St Louis's
 website for FRED. A lookup facility will hopefully
-be incorporated into \pkg{quantmod} in the near future.
+be incorporated into \pkg{cydquantmod} in the near future.
 }
 \value{
 A call to getSymbols.FRED will load into the specified

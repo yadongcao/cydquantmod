@@ -1,6 +1,6 @@
-library(quantmod)
+library(cydquantmod)
 
-test.web.endpoints <- Sys.getenv("QUANTMOD_TEST_WEB_ENDPOINTS")
+test.web.endpoints <- Sys.getenv("cydquantmod_TEST_WEB_ENDPOINTS")
 
 # split-adjusted by default
 #if (nzchar(test.web.endpoints)) {

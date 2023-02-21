@@ -1,28 +1,28 @@
 ### About
 
-[quantmod](http://www.quantmod.com) is an [R](https://www.r-project.org)
+[cydquantmod](http://www.cydquantmod.com) is an [R](https://www.r-project.org)
 package that provides a framework for quantitative financial modeling and
 trading. It provides a rapid prototyping environment that makes modeling easier
 by removing the repetitive workflow issues surrounding data management and
 visualization.
 
-### quantmod for enterprise
+### cydquantmod for enterprise
 
 Available as part of the Tidelift Subscription.
 
-The maintainers of `quantmod` and thousands of other packages are working with Tidelift to deliver commercial support and maintenance for the open source dependencies you use to build your applications. Save time, reduce risk, and improve code health, while paying the maintainers of the exact dependencies you use. [Learn more.](https://tidelift.com/subscription/pkg/cran-quantmod?utm_source=cran-quantmod&utm_medium=referral&utm_campaign=enterprise&utm_term=repo)
+The maintainers of `cydquantmod` and thousands of other packages are working with Tidelift to deliver commercial support and maintenance for the open source dependencies you use to build your applications. Save time, reduce risk, and improve code health, while paying the maintainers of the exact dependencies you use. [Learn more.](https://tidelift.com/subscription/pkg/cran-cydquantmod?utm_source=cran-cydquantmod&utm_medium=referral&utm_campaign=enterprise&utm_term=repo)
 
-### Supporting quantmod development
+### Supporting cydquantmod development
 
-If you are interested in supporting the ongoing development and maintenance of quantmod, please consider [becoming a sponsor](https://github.com/sponsors/joshuaulrich).
+If you are interested in supporting the ongoing development and maintenance of cydquantmod, please consider [becoming a sponsor](https://github.com/sponsors/joshuaulrich).
 
 ### Installation
 
-The current release is available on [CRAN](https://CRAN.R-project.org/package=quantmod),
+The current release is available on [CRAN](https://CRAN.R-project.org/package=cydquantmod),
 which you can install via:
 
 ```r
-install.packages("quantmod")
+install.packages("cydquantmod")
 ```
 
 To install the development version, you need to clone the repository and build
@@ -30,9 +30,9 @@ from source, or run one of:
 
 ```r
 # lightweight
-remotes::install_github("joshuaulrich/quantmod")
+remotes::install_github("joshuaulrich/cydquantmod")
 # or
-devtools::install_github("joshuaulrich/quantmod")
+devtools::install_github("joshuaulrich/cydquantmod")
 ```
 
 You may need tools to compile C, C++, or Fortran code. See the relevant
@@ -45,7 +45,7 @@ for your operating system:
 
 ### Getting Started
 
-It is possible to import data from a variety of sources with one quantmod
+It is possible to import data from a variety of sources with one cydquantmod
 function: `getSymbols()`. For example:
 
 ```r

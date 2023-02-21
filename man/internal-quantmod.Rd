@@ -1,8 +1,8 @@
-\name{internal-quantmod}
-\alias{.quantmodEnv}
+\name{internal-cydquantmod}
+\alias{.cydquantmodEnv}
 \alias{addShading}
 \alias{chartShading}
-\title{ Internal quantmod Objects }
+\title{ Internal cydquantmod Objects }
 \description{
 To be documented...
 }

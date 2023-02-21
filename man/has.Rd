@@ -56,7 +56,7 @@ has.Trade(x, which = FALSE)
   \item{which}{ disply position of match }
 }
 \details{
-Mostly used internally by \pkg{quantmod}, they can be useful
+Mostly used internally by \pkg{cydquantmod}, they can be useful
 for checking whether an object
 can be used in OHLC requiring functions like \code{Op},
 \code{OpCl}, etc.
@@ -64,7 +64,7 @@ can be used in OHLC requiring functions like \code{Op},
 Columns names must contain the full description of data,
 that is, Open, High, Low, Close, Volume or Adjusted. Abbreviations
 will return \code{FALSE} (or \code{NA} when which=TRUE). See
-\code{\link{quantmod.OHLC}} for details of \pkg{quantmod}
+\code{\link{cydquantmod.OHLC}} for details of \pkg{cydquantmod}
 naming conventions.
 
 \code{is.OHLC} (and is.HLC, similarly) will only return TRUE is there are columns
@@ -80,7 +80,7 @@ will be returned.
 \code{is.OHLC} and \code{is.HLC} return a single value of TRUE or FALSE.
 }
 \author{ Jeffrey A. Ryan }
-\seealso{ \code{\link{quantmod.OHLC}},\code{\link{OHLC.Transformations}} }
+\seealso{ \code{\link{cydquantmod.OHLC}},\code{\link{OHLC.Transformations}} }
 \examples{
 \dontrun{
 getSymbols("YHOO")

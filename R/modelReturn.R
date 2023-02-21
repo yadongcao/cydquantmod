@@ -1,6 +1,6 @@
 "modelReturn" <- function(tR.results,trade.dates=NULL,ret.type='months', leverage=1,exclude.training=TRUE)
 {
-  quantmodReturn <- new("quantmodReturn");
+  cydquantmodReturn <- new("cydquantmodReturn");
 
   trade.signal <- tR.results$signal;
   trade.start <- start(trade.signal);
@@ -65,18 +65,18 @@
 # colnames(returnsBy) <- c("cum.return","days",periods);
   if(NCOL(accuracy)>1) colnames(accuracy) <- periods;
   returnsBy <- allReturns(model.cumret)
-  quantmodReturn@returnsBy <- returnsBy;  
+  cydquantmodReturn@returnsBy <- returnsBy;  
   
-  quantmodReturn@dist.of.returns <- lapply(as.data.frame(returnsBy), function(x) as.numeric(summary(x))[1:6])
-  quantmodReturn@results <- model.results;
-  quantmodReturn@returns <- model.cumret;
-#  quantmodReturn@CAGR <- sprintf("%.4f%%", CAGR*100);
-#  quantmodReturn@HPR <- sprintf("%.2f%%",HPR*100);
-  quantmodReturn@CAGR <- CAGR
-  quantmodReturn@HPR <- HPR
-  quantmodReturn@accuracy <- accuracy
-  quantmodReturn@directional.accuracy <- directional.accuracy;
-  return(quantmodReturn);
+  cydquantmodReturn@dist.of.returns <- lapply(as.data.frame(returnsBy), function(x) as.numeric(summary(x))[1:6])
+  cydquantmodReturn@results <- model.results;
+  cydquantmodReturn@returns <- model.cumret;
+#  cydquantmodReturn@CAGR <- sprintf("%.4f%%", CAGR*100);
+#  cydquantmodReturn@HPR <- sprintf("%.2f%%",HPR*100);
+  cydquantmodReturn@CAGR <- CAGR
+  cydquantmodReturn@HPR <- HPR
+  cydquantmodReturn@accuracy <- accuracy
+  cydquantmodReturn@directional.accuracy <- directional.accuracy;
+  return(cydquantmodReturn);
 
 }
 

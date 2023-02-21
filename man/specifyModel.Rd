@@ -1,10 +1,10 @@
 \name{specifyModel}
 \alias{specifyModel}
 %- Also NEED an '\alias' for EACH other topic documented here.
-\title{ Specify Model Formula For quantmod Process }
+\title{ Specify Model Formula For cydquantmod Process }
 \description{
 Create a single reusable model specification for subsequent buildModel calls. 
-An object of class \code{quantmod} is created that can be then be reused with different
+An object of class \code{cydquantmod} is created that can be then be reused with different
 modelling methods and parameters.  No data frame is specified, as data is retrieved
 from potentially multiple environments, and internal calls to getSymbols.
 }
@@ -28,7 +28,7 @@ included within a call to specifyModel.
 See \code{getModelData} for details of
 how this process works.
 
-Currently, objects of class \code{quantmod.OHLC},
+Currently, objects of class \code{cydquantmod.OHLC},
 \code{zoo} and \code{ts} are supported within the
 model formula.
 
@@ -45,14 +45,14 @@ or \code{numeric} classes.
 }
 
 \value{
-Returns an object of class \code{quantmod}.
+Returns an object of class \code{cydquantmod}.
 Use \code{modelData} to extract
 full data set as \code{zoo} object.
 }
 
 \author{ Jeffrey Ryan }
 \references{
-  quantmod.com \url{http://www.quantmod.com}
+  cydquantmod.com \url{http://www.cydquantmod.com}
 }
 \note{ It is possible to include any supported series
        in the formula by simply specifying

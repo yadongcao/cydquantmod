@@ -1,21 +1,21 @@
 \name{fittedModel}
 \alias{fittedModel}
 \alias{fittedModel<-}
-\alias{formula.quantmod}
-\alias{plot.quantmod}
-\alias{coefficients.quantmod}
-\alias{coef.quantmod}
-\alias{residuals.quantmod}
-\alias{resid.quantmod}
-\alias{fitted.values.quantmod}
-\alias{fitted.quantmod}
-\alias{anova.quantmod}
-\alias{logLik.quantmod}
-\alias{vcov.quantmod}
-\title{ quantmod Fitted Objects }
+\alias{formula.cydquantmod}
+\alias{plot.cydquantmod}
+\alias{coefficients.cydquantmod}
+\alias{coef.cydquantmod}
+\alias{residuals.cydquantmod}
+\alias{resid.cydquantmod}
+\alias{fitted.values.cydquantmod}
+\alias{fitted.cydquantmod}
+\alias{anova.cydquantmod}
+\alias{logLik.cydquantmod}
+\alias{vcov.cydquantmod}
+\title{ cydquantmod Fitted Objects }
 \description{
 Extract and replace fitted models from
-\code{quantmod} objects built with
+\code{cydquantmod} objects built with
 \code{buildModel}. All objects fitted
 through methods specified in \code{buildModel}
 calls can be extracted for further analysis.
@@ -24,30 +24,30 @@ calls can be extracted for further analysis.
 fittedModel(object)
 
 
-\method{formula}{quantmod}(x, \dots)
+\method{formula}{cydquantmod}(x, \dots)
 
-\method{plot}{quantmod}(x, \dots)
+\method{plot}{cydquantmod}(x, \dots)
 
-\method{coefficients}{quantmod}(object, \dots)
+\method{coefficients}{cydquantmod}(object, \dots)
 
-\method{coef}{quantmod}(object, \dots)
+\method{coef}{cydquantmod}(object, \dots)
 
-\method{residuals}{quantmod}(object, \dots)
+\method{residuals}{cydquantmod}(object, \dots)
 
-\method{resid}{quantmod}(object, \dots)
+\method{resid}{cydquantmod}(object, \dots)
 
-\method{fitted.values}{quantmod}(object, \dots)
+\method{fitted.values}{cydquantmod}(object, \dots)
 
-\method{fitted}{quantmod}(object, \dots)
+\method{fitted}{cydquantmod}(object, \dots)
 
-\method{anova}{quantmod}(object, \dots)
+\method{anova}{cydquantmod}(object, \dots)
 
-\method{logLik}{quantmod}(object, \dots)
+\method{logLik}{cydquantmod}(object, \dots)
 
-\method{vcov}{quantmod}(object, \dots)
+\method{vcov}{cydquantmod}(object, \dots)
 }
 \arguments{
-  \item{object}{ a \code{quantmod} object }
+  \item{object}{ a \code{cydquantmod} object }
   \item{x}{ a suitable object }
   \item{\dots}{ additional arguments }
 }
@@ -55,10 +55,10 @@ fittedModel(object)
 Most often used to extract the final fitted
 object of the modelling process, usually for
 further analysis with tools outside
-the \pkg{quantmod} package.
+the \pkg{cydquantmod} package.
 
 Most common methods to apply to fitted objects
-are available to the parent \code{quantmod}
+are available to the parent \code{cydquantmod}
 object. At present, one can call directly the
 following S3 methods on a built model as if
 calling directly on the fitted object.
@@ -82,10 +82,10 @@ is highly experimental, and may or may not
 continue into further releases.
 
 The fitted model added \emph{must} use the
-same names as appear in the \code{quantmod}
+same names as appear in the \code{cydquantmod}
 object's dataset.
 }
-\seealso{ \code{\link{quantmod}},\code{\link{buildModel}} }
+\seealso{ \code{\link{cydquantmod}},\code{\link{buildModel}} }
 \examples{
 \dontrun{
 x <- specifyModel(Next(OpCl(DIA)) ~ OpCl(VIX))

@@ -102,8 +102,8 @@ getSymbols(c('QQQQ','DIA'))
 ## from the same source
 
 .First <- function() {
-  require(quantmod,quietly=TRUE)
-  quantmod::setSymbolLookup(JAVA="MySQL")
+  require(cydquantmod,quietly=TRUE)
+  cydquantmod::setSymbolLookup(JAVA="MySQL")
 }
 
 ## OR

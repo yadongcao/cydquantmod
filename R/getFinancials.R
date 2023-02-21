@@ -12,8 +12,8 @@ function(Symbol, env=parent.frame(), src="google", auto.assign=TRUE, ...) {
   msg <- paste0(sQuote("getFinancials.google"), " is defunct.",
          "\nGoogle Finance stopped providing data in March, 2018.",
          "\nYou could try some of the data sources via Quandl instead.",
-         "\nSee help(\"Defunct\") and help(\"quantmod-defunct\")")
-  .Defunct("Quandl", "quantmod", msg = msg)
+         "\nSee help(\"Defunct\") and help(\"cydquantmod-defunct\")")
+  .Defunct("Quandl", "cydquantmod", msg = msg)
 }
 
 

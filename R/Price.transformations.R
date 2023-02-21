@@ -324,7 +324,7 @@ set.Trade <- function(x, error=TRUE) {
 }
 
 ###############################################################################
-# R (http://r-project.org/) quantmod
+# R (http://r-project.org/) cydquantmod
 #
 # Copyright (c) 2009-2010
 # Peter Carl, Dirk Eddelbuettel, Brian G. Peterson, Jeffrey Ryan, and Joshua Ulrich

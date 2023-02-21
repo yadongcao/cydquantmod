@@ -1,4 +1,4 @@
-library(quantmod)
+library(cydquantmod)
 
 api.key <- "abc"
 src <- "xyz"

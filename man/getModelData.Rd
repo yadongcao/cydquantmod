@@ -9,7 +9,7 @@ Update currently specified or built model with most recent data.
 getModelData(x, na.rm = TRUE)
 }
 \arguments{
-  \item{x}{ An object of class \code{quantmod} }
+  \item{x}{ An object of class \code{cydquantmod} }
   \item{na.rm}{ Boolean. Remove NA values. Defaults to TRUE }
 }
 \details{
@@ -19,7 +19,7 @@ and apply model specified transformations automatically.
 It can be used to also update a current model in memory with the most recent data.
 }
 \value{
-Returns object of class \code{quantmod.OHLC}
+Returns object of class \code{cydquantmod.OHLC}
 }
 \author{ Jeffrey Ryan }
 

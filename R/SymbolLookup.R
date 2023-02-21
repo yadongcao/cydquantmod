@@ -33,7 +33,7 @@ function(...)
 "loadSymbolLookup" <-
 function(file,dir="")
 {
-  if(missing(file)) file <- ".quantmod.SymbolLookup.rda"
+  if(missing(file)) file <- ".cydquantmod.SymbolLookup.rda"
   if(dir!="") {
     file <- file.path(dir,file)
   }
@@ -48,7 +48,7 @@ function(file,dir="")
 "saveSymbolLookup" <-
 function(file,dir="")
 {
-  if(missing(file)) file <- ".quantmod.SymbolLookup.rda"
+  if(missing(file)) file <- ".cydquantmod.SymbolLookup.rda"
   if(dir!="") {
     file <- file.path(dir,file)
   }

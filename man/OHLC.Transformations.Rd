@@ -123,7 +123,7 @@ object column names using \code{grep}.
 \value{
 Returns an object of the same class as the original
 series, with the appropriately column names
-if applicable and/or possible.  The only exceptions are for \code{quantmod.OHLC}
+if applicable and/or possible.  The only exceptions are for \code{cydquantmod.OHLC}
 objects which will be returned as \code{zoo} objects, and calls to
 \code{seriesLo} and \code{seriesHi} which \emph{may} return a numeric
 value instead of the original object type.

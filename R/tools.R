@@ -1,25 +1,25 @@
-`quantmodVersion` <- function() {
+`cydquantmodVersion` <- function() {
   return(list(Version='0.3-7', Revision=433))
 }
 
-`quantmodNews` <- function() {
+`cydquantmodNews` <- function() {
 
 }
 
-`quantmodChanges` <- function() {
+`cydquantmodChanges` <- function() {
 
 }
 
-`quantmodBugs` <- function() {
+`cydquantmodBugs` <- function() {
 
 }
 
-`quantmodComment` <- function() {
+`cydquantmodComment` <- function() {
 
 }
 
-`quantmod.com` <- function() {
-  browseURL('http://www.quantmod.com')
+`cydquantmod.com` <- function() {
+  browseURL('http://www.cydquantmod.com')
 }
 
 `try.download.file` <-

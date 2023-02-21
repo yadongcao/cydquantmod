@@ -1,42 +1,42 @@
 `buildModel.glm` <-
-function(quantmod,training.data=training.data,...)
+function(cydquantmod,training.data=training.data,...)
 {
-	gl <- glm(formula=quantmod@model.formula,data=training.data,...);
+	gl <- glm(formula=cydquantmod@model.formula,data=training.data,...);
 	return(list("fitted"=gl,
                 "inputs"=attr(terms(gl),"term.labels"))); 
 }
 
 `buildModel.lm` <-
-function(quantmod,training.data,...)
+function(cydquantmod,training.data,...)
 {
-	l <- lm(formula=quantmod@model.formula,data=training.data,...);
+	l <- lm(formula=cydquantmod@model.formula,data=training.data,...);
 	return(list("fitted"=l,
                 "inputs"=attr(terms(l),"term.labels"))); 
 }
 
 `buildModel.step` <-
-function(quantmod,training.data,...)
+function(cydquantmod,training.data,...)
 {
-    s <- step(lm(formula=quantmod@model.formula,data=training.data,...),...);
+    s <- step(lm(formula=cydquantmod@model.formula,data=training.data,...),...);
 	return(list("fitted"=s,
                 "inputs"=NULL)); 
 }
 
 `buildModel.loess` <-
-function(quantmod,training.data,...)
+function(cydquantmod,training.data,...)
 {
-    l <- loess(quantmod@model.formula,data=training.data,...);
+    l <- loess(cydquantmod@model.formula,data=training.data,...);
 	return(list("fitted"=l,
                 "inputs"=attr(terms(l),"term.labels"))); 
 }
 
 ####### quantile regression method 'rq' - requires package quantreg
 `buildModel.rq` <-
-function(quantmod,training.data,...)
+function(cydquantmod,training.data,...)
 {
   if(is.method.available('rq','quantreg')) {
-    #r <- rq(quantmod@model.formula,data=training.data,...)
-    r <- do.call('rq',list(quantmod@model.formula,data=training.data,...))
+    #r <- rq(cydquantmod@model.formula,data=training.data,...)
+    r <- do.call('rq',list(cydquantmod@model.formula,data=training.data,...))
 	return(list("fitted"=r,
                 "inputs"=attr(terms(r),"term.labels"))) 
   }
@@ -44,11 +44,11 @@ function(quantmod,training.data,...)
 
 ####### resistant regression method 'lqs' - requires package MASS
 `buildModel.lqs` <-
-function(quantmod,training.data,...)
+function(cydquantmod,training.data,...)
 {
   if(is.method.available('lqs','MASS')) {
-    #lq <- lqs(quantmod@model.formula,data=training.data,...)
-    lq <- do.call('lqs',list(quantmod@model.formula,data=training.data,...))
+    #lq <- lqs(cydquantmod@model.formula,data=training.data,...)
+    lq <- do.call('lqs',list(cydquantmod@model.formula,data=training.data,...))
 	return(list("fitted"=lq,
                 "inputs"=attr(terms(lq),"term.labels"))) 
   }
@@ -56,11 +56,11 @@ function(quantmod,training.data,...)
 
 ####### robust regression method 'rlm' - requires package MASS
 `buildModel.rlm` <-
-function(quantmod,training.data,...)
+function(cydquantmod,training.data,...)
 {
   if(is.method.available('lqs','MASS')) {
-    #rl <- rlm(quantmod@model.formula,data=training.data,...)
-    rl <- do.call('rlm',list(quantmod@model.formula,data=training.data,...))
+    #rl <- rlm(cydquantmod@model.formula,data=training.data,...)
+    rl <- do.call('rlm',list(cydquantmod@model.formula,data=training.data,...))
 	return(list("fitted"=rl,
                 "inputs"=attr(terms(rl),"term.labels"))) 
   }
@@ -68,11 +68,11 @@ function(quantmod,training.data,...)
 
 ####### neural net method - requires package nnet
 `buildModel.nnet` <-
-function(quantmod,training.data,...)
+function(cydquantmod,training.data,...)
 {
   if(is.method.available('nnet','nnet')) {
-	#nn <- nnet(quantmod@model.formula,data=training.data,...)
-    nn <- do.call('nnet',list(quantmod@model.formula,data=training.data,...))
+	#nn <- nnet(cydquantmod@model.formula,data=training.data,...)
+    nn <- do.call('nnet',list(cydquantmod@model.formula,data=training.data,...))
 	return(list("fitted"=nn,
                 "inputs"=attr(terms(nn),"term.labels"))) 
   }
@@ -87,17 +87,17 @@ function(object,data,...)
 
 ####### projection pursuit regression method - requires stats
 `buildModel.ppr` <-
-function(quantmod,training.data,...)
+function(cydquantmod,training.data,...)
 {
-	#p <- ppr(quantmod@model.formula,data=training.data,...)
-    p <- do.call('ppr',list(quantmod@model.formula,data=training.data,...))
+	#p <- ppr(cydquantmod@model.formula,data=training.data,...)
+    p <- do.call('ppr',list(cydquantmod@model.formula,data=training.data,...))
 	return(list("fitted"=p,
                 "inputs"=attr(terms(p),"term.labels"))) 
 }
 
 ####### mars method - requires package mda
 `buildModel.mars` <-
-function(quantmod,training.data,...)
+function(cydquantmod,training.data,...)
 {
   if(is.method.available('mars','mda')) {
 	x <- training.data[,-1]
@@ -119,7 +119,7 @@ function(object,data,...)
 
 ####### polymars method - requires package polspline
 `buildModel.polymars` <-
-function(quantmod,training.data,...)
+function(cydquantmod,training.data,...)
 {
   if(is.method.available('polymars','polspline')) {
 	responses <- training.data[,1]
@@ -141,7 +141,7 @@ function(object,data,...)
 
 ####### lars method - requires package lars
 `buildModel.lars` <-
-function(quantmod,training.data,...)
+function(cydquantmod,training.data,...)
 {
   if(is.method.available('lars','lars')) {
 	x <- training.data[,-1]
@@ -164,11 +164,11 @@ function(object,data,lars.s,...)
 
 ####### rpart method - requires package rpart
 `buildModel.rpart` <-
-function(quantmod,training.data,...)
+function(cydquantmod,training.data,...)
 {
   if(is.method.available('rpart','rpart')) {
-	#rp <- rpart(quantmod@model.formula,data=training.data,...);
-    rp <- do.call('rpart',list(quantmod@model.formula,data=training.data,...))
+	#rp <- rpart(cydquantmod@model.formula,data=training.data,...);
+    rp <- do.call('rpart',list(cydquantmod@model.formula,data=training.data,...))
 	return(list("fitted"=rp,
                 "inputs"=attr(terms(rp),"term.labels"))); 
   }
@@ -184,11 +184,11 @@ function(object,data,...)
 
 ####### tree method - requires package tree
 `buildModel.tree` <-
-function(quantmod,training.data,...)
+function(cydquantmod,training.data,...)
 {
   if(is.method.available('tree','tree')) {
-	#rp <- tree(quantmod@model.formula,data=training.data,...);
-    rp <- do.call('tree',list(quantmod@model.formula,data=training.data,...))
+	#rp <- tree(cydquantmod@model.formula,data=training.data,...);
+    rp <- do.call('tree',list(cydquantmod@model.formula,data=training.data,...))
 	return(list("fitted"=rp,
                 "inputs"=attr(terms(rp),"term.labels"))); 
   }
@@ -204,11 +204,11 @@ function(object,data,...)
 
 ####### randomForest method - requires package randomForest
 `buildModel.randomForest` <-
-function(quantmod,training.data,...)
+function(cydquantmod,training.data,...)
 {
   if(is.method.available('randomForest','randomForest')) {
-    #rp <- randomForest(quantmod@model.formula,data=training.data,...)
-    rp <- do.call('randomForest',list(quantmod@model.formula,data=training.data,...))
+    #rp <- randomForest(cydquantmod@model.formula,data=training.data,...)
+    rp <- do.call('randomForest',list(cydquantmod@model.formula,data=training.data,...))
     return(list("fitted"=rp,
             "inputs"=attr(terms(rp),"term.labels"))) 
   }
@@ -223,11 +223,11 @@ function(object,data,...)
 }
 
 `buildModel.svm` <-
-function(quantmod,training.data,...)
+function(cydquantmod,training.data,...)
 {
   if(is.method.available('svm','e1071')) {
-    #rp <- svm(formula(quantmod),data=training.data,...)
-    rp <- do.call('svm',list(formula(quantmod),data=training.data,...))
+    #rp <- svm(formula(cydquantmod),data=training.data,...)
+    rp <- do.call('svm',list(formula(cydquantmod),data=training.data,...))
     return(list('fitted'=rp,attr(terms(rp),'term.labels')))
   }
 }

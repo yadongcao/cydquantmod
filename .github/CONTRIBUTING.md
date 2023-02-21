@@ -14,12 +14,12 @@ mailing list (you must subscribe to post).
    should identify the package that contains the bug or should contain the
    feature. Please email the maintainer if you're unsure where to create an
    issue.
-2. Search current open GitHub [issues](https://github.com/joshuaulrich/quantmod/issues)
+2. Search current open GitHub [issues](https://github.com/joshuaulrich/cydquantmod/issues)
    to check if the bug/feature has already been reported/requested.
 3. Ensure your fork and local copy are up-to-date, and verify the bug still
    exists in the HEAD of the master branch.
 4. If the bug exists in the HEAD of master, and you can't find an open issue,
-   then [open a new issue](https://github.com/joshuaulrich/quantmod/issues).
+   then [open a new issue](https://github.com/joshuaulrich/cydquantmod/issues).
    Please be sure to:
     * Use an informative and descriptive title,
     * Describe the expected behavior and why you think the current behavior is

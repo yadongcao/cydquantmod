@@ -1,6 +1,6 @@
 \name{Lag}
 \alias{Lag}
-\alias{Lag.quantmod.OHLC}
+\alias{Lag.cydquantmod.OHLC}
 \alias{Lag.zoo}
 \alias{Lag.data.frame}
 \alias{Lag.numeric}
@@ -12,7 +12,7 @@ Create a lagged series from data, with \code{NA} used to fill.
 \usage{
 Lag(x, k = 1)
 
-\method{Lag}{quantmod.OHLC}(x, k = 1)
+\method{Lag}{cydquantmod.OHLC}(x, k = 1)
 
 \method{Lag}{zoo}(x, k = 1)
 
@@ -28,8 +28,8 @@ Lag(x, k = 1)
 Shift series k-periods down, prepending \code{NA}s to front
 of series.
 
-Specifically designed to handle \code{quantmod.OHLC} and
-\code{zoo} series within the \code{quantmod} workflow.
+Specifically designed to handle \code{cydquantmod.OHLC} and
+\code{zoo} series within the \code{cydquantmod} workflow.
 
 If no S3 method is found, a call to \code{lag} in \pkg{base}
 is made.

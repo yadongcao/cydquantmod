@@ -1,7 +1,7 @@
 getModelData <- function(x, na.rm=TRUE) {
   model <- x
-  if (!is.quantmod(model)) 
-      stop(sQuote("x"), "must be of class", dQuote("quantmod"), 
+  if (!is.cydquantmod(model)) 
+      stop(sQuote("x"), "must be of class", dQuote("cydquantmod"), 
           "\n")
   if (length(model@model.inputs) == 0) {
       build.vars <- c(model@model.target, model@build.inputs)
@@ -55,8 +55,8 @@ getModelData <- function(x, na.rm=TRUE) {
 }
 ..getModelData <- function(x, na.rm=TRUE) {
     model <- x
-    if (!is.quantmod(model)) 
-        stop(sQuote("x"), "must be of class", dQuote("quantmod"), 
+    if (!is.cydquantmod(model)) 
+        stop(sQuote("x"), "must be of class", dQuote("cydquantmod"), 
             "\n")
     if (length(model@model.inputs) == 0) {
         build.vars <- c(model@model.target, model@build.inputs)
@@ -125,8 +125,8 @@ function(x,na.rm=TRUE)
       }
     }
     model <- x
-    if(!is.quantmod(model)) 
-        stop(sQuote('x'),"must be of class",dQuote("quantmod"),"\n");
+    if(!is.cydquantmod(model)) 
+        stop(sQuote('x'),"must be of class",dQuote("cydquantmod"),"\n");
     if(length(model@model.inputs) == 0) {
         #if model.inputs is not yet defined, create full zoo object for building
         build.vars <- c(model@model.target,model@build.inputs);
@@ -145,7 +145,7 @@ function(x,na.rm=TRUE)
         } else {
             ## get symbols from GlobaEnv and place in this environment
             assign(model.symbols[[i]],get(model.symbols[[i]],1),environment())
-            ## NEED to coerce to quantmod.OHLC and zoo object
+            ## NEED to coerce to cydquantmod.OHLC and zoo object
         }
     }
 
@@ -206,7 +206,7 @@ function(x,na.rm=TRUE)
 }
 "stripModelData" <-
 function(model) {
-    if(!inherits(model, "quantmod")) stop("model must be of class 'quantmod'");
+    if(!inherits(model, "cydquantmod")) stop("model must be of class 'cydquantmod'");
     model@model.data <- zoo(0,0);
     model@price.levels <- zoo(0,0);
     return(model);

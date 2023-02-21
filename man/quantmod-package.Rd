@@ -1,7 +1,7 @@
-\name{quantmod-package}
-\alias{quantmod-package}
-\alias{quantmod}
-\alias{quantmodenv}
+\name{cydquantmod-package}
+\alias{cydquantmod-package}
+\alias{cydquantmod}
+\alias{cydquantmodenv}
 \docType{package}
 \title{
 Quantitative Financial Modelling Framework
@@ -10,15 +10,15 @@ Quantitative Financial Modelling Framework
 Quantitative Financial Modelling and Trading Framework for R
 }
 \details{
-\packageDESCRIPTION{quantmod}
+\packageDESCRIPTION{cydquantmod}
 
-The quantmod package for R is designed to
+The cydquantmod package for R is designed to
 assist the quantitative trader in the
 development, testing, and deployment
 of statistically based trading models.
 
 
-\emph{What quantmod IS}
+\emph{What cydquantmod IS}
 
 A rapid prototyping environment, with comprehensive
 tools for data management and visualization.
@@ -26,7 +26,7 @@ where quant traders can quickly
 and cleanly explore and build trading models.
 
 
-\emph{What quantmod is NOT}
+\emph{What cydquantmod is NOT}
 
 A replacement for anything statistical.
 It has no 'new' modelling routines or
@@ -37,7 +37,7 @@ is more of a wrapper to what you already
 know and love about the langauge
 and packages you currently use.
 
-quantmod makes modelling easier by removing
+cydquantmod makes modelling easier by removing
 the repetitive workflow issues surrounding
 data management, modelling interfaces,
 and performance analysis. 

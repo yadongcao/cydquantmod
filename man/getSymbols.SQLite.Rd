@@ -37,7 +37,7 @@ getSymbols.SQLite(Symbols,
 Meant to be called internally by \code{getSymbols} (see also)
 
 One of a few currently defined methods for loading data for use
-with 'quantmod'. Its use requires the packages 'DBI' and 'RSQLite',
+with 'cydquantmod'. Its use requires the packages 'DBI' and 'RSQLite',
 along with a SQLite database.
 
 The purpose of this abstraction is to make transparent the
@@ -65,7 +65,7 @@ defined by 'return.class'.
 \note{ 
 This function is experimental at best, and has not been
 thoroughly tested.  Use with caution, and please report
-any bugs to the maintainer of quantmod.
+any bugs to the maintainer of cydquantmod.
 }
 \seealso{ \code{\link{getSymbols}}}
 \examples{

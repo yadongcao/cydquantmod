@@ -205,14 +205,14 @@ formals(loadSymbols) <- loadSymbols.formals
 
 .getHandle <- function(curl.options = list(), force.new = FALSE)
 {
-  h <- get0("_handle_", .quantmodEnv)
+  h <- get0("_handle_", .cydquantmodEnv)
 
   if (is.null(h) || force.new) {
     # create 'h' if it doesn't exist yet
     h <- curl::new_handle()
     curl::handle_setopt(h, .list = curl.options)
 
-    assign("_handle_", h, .quantmodEnv)
+    assign("_handle_", h, .cydquantmodEnv)
   }
   return(h)
 }
@@ -499,8 +499,8 @@ function(Symbols,env,return.class='xts',
   msg <- paste0(sQuote("getSymbols.google"), " is defunct.",
          "\nGoogle Finance stopped providing data in March, 2018.",
          "\nYou could try setting src = \"yahoo\" instead.",
-         "\nSee help(\"Defunct\") and help(\"quantmod-defunct\")")
-  .Defunct("getSymbols", "quantmod", msg = msg)
+         "\nSee help(\"Defunct\") and help(\"cydquantmod-defunct\")")
+  .Defunct("getSymbols", "cydquantmod", msg = msg)
 }
 # }}}
 
@@ -1504,8 +1504,8 @@ getSymbols.tiingo <- function(Symbols, env, api.key,
 
 # convert.time.series {{{
 `convert.time.series` <- function(fr,return.class) {
-       if('quantmod.OHLC' %in% return.class) {
-         class(fr) <- c('quantmod.OHLC','zoo')
+       if('cydquantmod.OHLC' %in% return.class) {
+         class(fr) <- c('cydquantmod.OHLC','zoo')
          return(fr)
        } else
        if('xts' %in% return.class) {
@@ -1592,7 +1592,7 @@ function(Symbols=NULL,file.path=stop("must specify 'file.path'"),env=parent.fram
 
 # buildData {{{
 "buildData" <- function(formula,na.rm=TRUE,return.class="zoo") {
-  if(is.quantmod(formula)) {
+  if(is.cydquantmod(formula)) {
     fr <- modelData(formula)
   } else {
     fr <- modelData(specifyModel(formula,na.rm=na.rm))

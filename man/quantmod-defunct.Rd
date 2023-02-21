@@ -1,13 +1,13 @@
-\name{quantmod-defunct}
-\alias{quantmod-defunct}
-\title{Defunct Functions in Package \pkg{quantmod}}
+\name{cydquantmod-defunct}
+\alias{cydquantmod-defunct}
+\title{Defunct Functions in Package \pkg{cydquantmod}}
 % NOTE: need \alias{.} here for each function
 \alias{getSymbols.google}
 \alias{getFin.google}
 \alias{getFinancials.google}
 %
 \description{
-  The functions listed here are no longer part of \pkg{quantmod}.
+  The functions listed here are no longer part of \pkg{cydquantmod}.
 }
 \usage{
   # Defunct in 0.4-13

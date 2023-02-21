@@ -1,6 +1,6 @@
-library(quantmod)
+library(cydquantmod)
 
-test.web.endpoints <- Sys.getenv("QUANTMOD_TEST_WEB_ENDPOINTS")
+test.web.endpoints <- Sys.getenv("cydquantmod_TEST_WEB_ENDPOINTS")
 
 # Ensure getSplits() returns the expected ratio
 if (nzchar(test.web.endpoints)) {

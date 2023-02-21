@@ -1,14 +1,14 @@
-\name{is.quantmod}
-\alias{is.quantmod}
-\alias{is.quantmodResults}
-\title{ Test If Object of Type quantmod }
+\name{is.cydquantmod}
+\alias{is.cydquantmod}
+\alias{is.cydquantmodResults}
+\title{ Test If Object of Type cydquantmod }
 \description{
-Test if object is of type \code{quantmod} or
-\code{quantmodResults}.
+Test if object is of type \code{cydquantmod} or
+\code{cydquantmodResults}.
 }
 \usage{
-is.quantmod(x)
-is.quantmodResults(x)
+is.cydquantmod(x)
+is.cydquantmodResults(x)
 }
 \arguments{
   \item{x}{ object to test }

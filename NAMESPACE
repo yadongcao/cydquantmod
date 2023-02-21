@@ -1,7 +1,7 @@
-export(quantmodenv, .quantmodEnv)
-S3method(print, quantmodEnv)
+export(cydquantmodenv, .cydquantmodEnv)
+S3method(print, cydquantmodEnv)
 
-# NAMESPACE file for quantmod
+# NAMESPACE file for cydquantmod
 import(methods, zoo, xts, TTR)
 
 importFrom(graphics,
@@ -113,7 +113,7 @@ export(listTA,
       )
 
 export(
-       # quantmod-only code
+       # cydquantmod-only code
        addVo,       # volume
        addExpiry,   # expiration dates
        addEnvelope, # envelope
@@ -285,9 +285,9 @@ export(
 	buildModel,
 	buildData,
 
-    is.quantmod,
-    is.quantmodResults,
-    as.quantmod.OHLC)
+    is.cydquantmod,
+    is.cydquantmodResults,
+    as.cydquantmod.OHLC)
 
 export(
        # symbol lookup utilities
@@ -337,38 +337,38 @@ S3method(print,chart.theme)
 S3method(Next,zoo)
 S3method(Next,numeric)
 S3method(Next,data.frame)
-S3method(Next,quantmod.OHLC)
+S3method(Next,cydquantmod.OHLC)
 
 S3method(Lag,default)
 S3method(Lag,numeric)
 S3method(Lag,data.frame)
 S3method(Lag,zoo)
 S3method(Lag,xts)
-S3method(Lag,quantmod.OHLC)
+S3method(Lag,cydquantmod.OHLC)
 
-S3method(formula,quantmod)
-S3method(fitted,quantmod)
-S3method(fitted.values,quantmod)
-S3method(coef,quantmod)
-S3method(coefficients,quantmod)
-S3method(logLik,quantmod)
-S3method(vcov,quantmod)
-S3method(residuals,quantmod)
-S3method(resid,quantmod)
-S3method(anova,quantmod)
-S3method(plot,quantmod)
+S3method(formula,cydquantmod)
+S3method(fitted,cydquantmod)
+S3method(fitted.values,cydquantmod)
+S3method(coef,cydquantmod)
+S3method(coefficients,cydquantmod)
+S3method(logLik,cydquantmod)
+S3method(vcov,cydquantmod)
+S3method(residuals,cydquantmod)
+S3method(resid,cydquantmod)
+S3method(anova,cydquantmod)
+S3method(plot,cydquantmod)
 S3method(plot,chobTA)
-S3method(plot,quantmodResults)
-S3method(print,quantmodResults)
+S3method(plot,cydquantmodResults)
+S3method(print,cydquantmodResults)
 S3method(as.zoo,data.frame)
-S3method(as.zoo,quantmod.OHLC)
-S3method(as.quantmod.OHLC,data.frame)
-S3method(as.quantmod.OHLC,zoo)
-S3method(as.quantmod.OHLC,quantmod.OHLC)
-S3method('[',quantmod.OHLC)
+S3method(as.zoo,cydquantmod.OHLC)
+S3method(as.cydquantmod.OHLC,data.frame)
+S3method(as.cydquantmod.OHLC,zoo)
+S3method(as.cydquantmod.OHLC,cydquantmod.OHLC)
+S3method('[',cydquantmod.OHLC)
 #S3method(periodReturn,zoo)
-#S3method(periodReturn,quantmod.OHLC)
-#S3method(periodReturn,quantmodResults)
+#S3method(periodReturn,cydquantmod.OHLC)
+#S3method(periodReturn,cydquantmodResults)
 S3method(predictModel,default)
 S3method(predictModel,nnet)
 S3method(predictModel,mars)
@@ -380,9 +380,9 @@ S3method(predictModel,randomForest)
 
 # trade signal functionality
 
-exportClass(quantmod)
-#exportClass(quantmodResults,quantmodReturn)
-exportClass(quantmodReturn)
+exportClass(cydquantmod)
+#exportClass(cydquantmodResults,cydquantmodReturn)
+exportClass(cydquantmodReturn)
 exportClass(tradeLog)
 exportClass(chob,chobTA)
 exportMethods(show,summary,'fittedModel<-')

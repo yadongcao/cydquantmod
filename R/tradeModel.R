@@ -8,11 +8,11 @@
                          ret.type=c('weeks','months','quarters','years'),...)
 {
   trade.offset = 0;
-  quantmod <- getModelData(x);
-  if(!inherits(quantmod, "quantmod")) stop("model must be of class quantmod");
+  cydquantmod <- getModelData(x);
+  if(!inherits(cydquantmod, "cydquantmod")) stop("model must be of class cydquantmod");
   if(!is.null(trade.dates) && length(trade.dates) < 2) stop("trade.dates must be of length 2");
-  model.data <- modelData(quantmod,trade.dates,exclude.training=exclude.training);
-  fitted.zoo <- predictModel(quantmod@fitted.model,model.data,...)
+  model.data <- modelData(cydquantmod,trade.dates,exclude.training=exclude.training);
+  fitted.zoo <- predictModel(cydquantmod@fitted.model,model.data,...)
   if(inherits(fitted.zoo, "zoo", which = TRUE) != 1) {
     # if(class(fitted.zoo) != "zoo") {
     # /\ this is only needed if 'fitted.zoo' is not exactly a zoo object (i.e. not xts)
@@ -30,18 +30,18 @@
   signal.zoo = merge(market.zoo,signal.zoo)
   index(signal.zoo) <- tmp.index;
 
-  #quantmodResults <- new("quantmodResults", model=quantmod, signal=signal.zoo);
-  quantmodResults <- list(model=quantmod, signal=signal.zoo)
+  #cydquantmodResults <- new("cydquantmodResults", model=cydquantmod, signal=signal.zoo);
+  cydquantmodResults <- list(model=cydquantmod, signal=signal.zoo)
 
-  model.returns <- modelReturn(quantmodResults,trade.dates=trade.dates,leverage=leverage,ret.type=ret.type);
-  quantmodResults$return <- model.returns;
+  model.returns <- modelReturn(cydquantmodResults,trade.dates=trade.dates,leverage=leverage,ret.type=ret.type);
+  cydquantmodResults$return <- model.returns;
 
   # strip data to minimize memory consumption
-  quantmodResults$model <- stripModelData(quantmodResults$model);
- return(structure(quantmodResults, class="quantmodResults"));
+  cydquantmodResults$model <- stripModelData(cydquantmodResults$model);
+ return(structure(cydquantmodResults, class="cydquantmodResults"));
 }
 
-print.quantmodResults <- function(x, ...) {
+print.cydquantmodResults <- function(x, ...) {
     cat("\n  Model: ",x$model@model.id,"\n")
 	cat("\n  C.A.G.R.: ",sprintf("%04.2f%%",x$return@CAGR*100),"\tH.P.R.: ",
         sprintf("%04.2f%%",x$return@HPR*100),"\n");

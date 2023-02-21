@@ -172,7 +172,7 @@ chart_pars <- function() {
 #  graphical operations.
 #
 #  Ideally all behavior is consistent with the
-#  original quantmod:::chartSeries, except the
+#  original cydquantmod:::chartSeries, except the
 #  undesireable ones.
 chart_Series <- function(x, 
                          name=deparse(substitute(x)), 
@@ -901,7 +901,7 @@ add_MACD <- function(fast=12,slow=26,signal=9,maType="EMA",histogram=TRUE,...) {
   lenv <- new.env() # local environment for add_MACD call
   
   # plot_macd draws the indicator using the data from the first(only) call to
-  # add_MACD.  This is a bit analogous to chartMACD in the first quantmod versions
+  # add_MACD.  This is a bit analogous to chartMACD in the first cydquantmod versions
   lenv$plot_macd <- function(x, fast, slow, signal, maType, histogram,...) {
     xdata <- x$Env$xdata
     xsubset <- x$Env$xsubset

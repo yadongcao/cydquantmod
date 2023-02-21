@@ -1,6 +1,6 @@
 \name{Next}
 \alias{Next}
-\alias{Next.quantmod.OHLC}
+\alias{Next.cydquantmod.OHLC}
 \alias{Next.zoo}
 \alias{Next.data.frame}
 \alias{Next.numeric}
@@ -14,7 +14,7 @@ of \code{Lag}.  \code{NA} is used to fill.
 \usage{
 Next(x, k = 1)
 
-\method{Next}{quantmod.OHLC}(x,k=1)
+\method{Next}{cydquantmod.OHLC}(x,k=1)
 
 \method{Next}{zoo}(x,k=1)
 
@@ -30,8 +30,8 @@ Next(x, k = 1)
 \details{
 Shift series k-periods up, appending \code{NA}s to end of series.
 
-Specifically designed to handle \code{quantmod.OHLC} and
-\code{zoo} series within the \pkg{quantmod} workflow.
+Specifically designed to handle \code{cydquantmod.OHLC} and
+\code{zoo} series within the \pkg{cydquantmod} workflow.
 
 If no S3 method is found, a call to \code{lag} in \pkg{base} is made,
 with the indexing reversed to shift the time series forward.
@@ -49,7 +49,7 @@ Unlike \code{Lag}, only one value for \code{k} is allowed.
 This function's purpose is to get the \dQuote{next} value of
 the data you hope to forecast, e.g. a stock's closing value
 at t+1.  Specifically to be used within
-the \pkg{quantmod} framework of \code{specifyModel}, as a
+the \pkg{cydquantmod} framework of \code{specifyModel}, as a
 functional wrapper to the LHS of the model equation.
 
 It is not magic - and thus will not get tomorrow's values\ldots

@@ -3,7 +3,7 @@
 \alias{getDefaults}
 \alias{setDefaults}
 \alias{unsetDefaults}
-\title{ Manage Default Argument Values for quantmod Functions }
+\title{ Manage Default Argument Values for cydquantmod Functions }
 \description{
 Use globally specified defaults, if set, in place of formally specified
 default argument values. Allows user to specify function defaults

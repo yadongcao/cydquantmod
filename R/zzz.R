@@ -1,37 +1,37 @@
 #".onLoad" <- function(lib,pkg) {
-#  cat("quantmod: Quantitative Financial Modelling Framework\n\n")
+#  cat("cydquantmod: Quantitative Financial Modelling Framework\n\n")
 #  cat("Version 0.3-7, Revision 461\n")
-#  cat("http://www.quantmod.com\n\n")
+#  cat("http://www.cydquantmod.com\n\n")
 #}
 .plotEnv <- new.env()
-.quantmodEnv <- new.env()
+.cydquantmodEnv <- new.env()
  
-quantmodenv <- function() as.environment(".quantmodEnv")
-print.quantmodEnv <- function(x, ...) {
-  print("<environment: quantmodEnv>")
+cydquantmodenv <- function() as.environment(".cydquantmodEnv")
+print.cydquantmodEnv <- function(x, ...) {
+  print("<environment: cydquantmodEnv>")
 }
 
 .onAttach <- function(libname,pkgname) {
   #msg <- "Version 0.4-0 included new data defaults. See ?getSymbols."
   #packageStartupMessage(msg)
   # --as-cran check is complaining of this, as a NOTE
-  #attach(NULL, name='.quantmodEnv')  
+  #attach(NULL, name='.cydquantmodEnv')  
 }
 
-# Loading quantmod produces the following message:
+# Loading cydquantmod produces the following message:
 #
-# Registered S3 method overwritten by 'quantmod':
+# Registered S3 method overwritten by 'cydquantmod':
 #   method            from
 #   as.zoo.data.frame zoo
 #
 # Message users that this method will be deprecated in a future release.
-options(quantmod.deprecate.as.zoo.data.frame = TRUE)
+options(cydquantmod.deprecate.as.zoo.data.frame = TRUE)
 
 setOldClass("zoo");
 setOldClass("xts");
 setOldClass("Date");
 setClassUnion("xtsORzoo", c("xts","zoo"))
-setClass("quantmod",representation(
+setClass("cydquantmod",representation(
                     model.id="character",
 		            model.spec="formula",
                     model.formula="formula",
@@ -45,10 +45,10 @@ setClass("quantmod",representation(
                     build.date="character",
                     fitted.model="ANY",
                     model.data="ANY",
-                    quantmod.version="numeric"
+                    cydquantmod.version="numeric"
                     )
         );
-setClass("quantmodReturn",representation(
+setClass("cydquantmodReturn",representation(
                     results="xtsORzoo",
                     returns="xtsORzoo",
                     CAGR="numeric",
@@ -59,10 +59,10 @@ setClass("quantmodReturn",representation(
                     returnsBy="ANY"
                     )
         );
-#setClass("quantmodResults",representation(
-#                    model="quantmod",
+#setClass("cydquantmodResults",representation(
+#                    model="cydquantmod",
 #                    signal="zoo",
-#                    return="quantmodReturn"
+#                    return="cydquantmodReturn"
 #                    )
 #        );
 #setClass("tradeLog",representation(
@@ -93,8 +93,8 @@ setMethod("show", "chobTA",
           }
 )
 
-setMethod("show","quantmod", function(object) {
-	cat("\nquantmod object:  ",
+setMethod("show","cydquantmod", function(object) {
+	cat("\ncydquantmod object:  ",
         object@model.id,"\tBuild date: ",
         paste(object@build.date),"\n");
 	cat("\nModel Specified: \n    ",
@@ -118,8 +118,8 @@ setMethod("show","quantmod", function(object) {
 	}
 }
 )
-setMethod("summary","quantmod", function(object) {
-	cat("\nquantmod object:  ",
+setMethod("summary","cydquantmod", function(object) {
+	cat("\ncydquantmod object:  ",
         object@model.id,"\tBuild date: ",
         paste(object@build.date),"\n");
 	cat("\nModel Specified: \n    ",
@@ -143,7 +143,7 @@ setMethod("summary","quantmod", function(object) {
     }
 })
 
-#setMethod("show","quantmodResults", function(object) {
+#setMethod("show","cydquantmodResults", function(object) {
 #    cat("\n  Model: ",object@model@model.id,"\n")
 #	cat("\n  C.A.G.R.: ",sprintf("%04.2f%%",object@return@CAGR*100),"\tH.P.R.: ",
 #        sprintf("%04.2f%%",object@return@HPR*100),"\n");
@@ -163,8 +163,8 @@ setMethod("summary","quantmod", function(object) {
 "fittedModel"<-function(object) {object@fitted.model}
 #setGeneric("fittedModel<-", function(x,...,value) {standardGeneric("fittedModel<-")})
 setGeneric("fittedModel<-", function(object,value) {standardGeneric("fittedModel<-")})
-#setReplaceMethod("fittedModel","quantmod", function(x,...,value)
-setReplaceMethod("fittedModel","quantmod", function(object,value)
+#setReplaceMethod("fittedModel","cydquantmod", function(x,...,value)
+setReplaceMethod("fittedModel","cydquantmod", function(object,value)
 {
     object@fitted.model <- value
     
@@ -195,68 +195,68 @@ function(object,data,...)
 {
     predict(object,data,...);
 }
-'plot.quantmodResults' <-
+'plot.cydquantmodResults' <-
 function(x,...)
 {
     ret.by <- x@return@returnsBy
     plot(ret.by,type=c('l',rep('h',ncol(ret.by)-1)),...)
 }
 
-'formula.quantmod' <-
+'formula.cydquantmod' <-
 function(x,...)
 {
     x@model.formula
 }
 
-'coef.quantmod' <-
+'coef.cydquantmod' <-
 function(object,...)
 {
     if(!is.null(fittedModel(object)))
     coef(fittedModel(object),...)    
 }
 
-'coefficients.quantmod' <- coef.quantmod
+'coefficients.cydquantmod' <- coef.cydquantmod
 
-'fitted.quantmod' <-
+'fitted.cydquantmod' <-
 function(object,...)
 {
     if(!is.null(fittedModel(object)))
     fitted(fittedModel(object),...)
 }
 
-'fitted.values.quantmod' <- fitted.quantmod
+'fitted.values.cydquantmod' <- fitted.cydquantmod
 
-'residuals.quantmod' <-
+'residuals.cydquantmod' <-
 function(object,...)
 {
     if(!is.null(fittedModel(object)))
     residuals(fittedModel(object,...))
 }
 
-'resid.quantmod' <- residuals.quantmod
+'resid.cydquantmod' <- residuals.cydquantmod
 
-'vcov.quantmod' <-
+'vcov.cydquantmod' <-
 function(object,...)
 {
     if(!is.null(fittedModel(object)))
     vcov(fittedModel(object,...))
 }
 
-'logLik.quantmod' <-
+'logLik.cydquantmod' <-
 function(object, ...)
 {
     if(!is.null(fittedModel(object)))
     logLik(fittedModel(object),...)
 }
 
-'anova.quantmod' <-
+'anova.cydquantmod' <-
 function(object,...)
 {
     if(!is.null(fittedModel(object)))
     anova(fittedModel(object),...)
 }
 
-'plot.quantmod' <-
+'plot.cydquantmod' <-
 function(x,...)
 {
     if(!is.null(fittedModel(x)))

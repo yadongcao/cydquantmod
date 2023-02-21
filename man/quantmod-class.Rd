@@ -1,28 +1,28 @@
-\name{quantmod-class}
+\name{cydquantmod-class}
 \docType{class}
-\alias{quantmod-class}
-\alias{summary,quantmod-method}
-\alias{show,quantmod-method}
+\alias{cydquantmod-class}
+\alias{summary,cydquantmod-method}
+\alias{show,cydquantmod-method}
 \alias{fittedModel<--methods}
-\alias{fittedModel<-,quantmod-method}
+\alias{fittedModel<-,cydquantmod-method}
 
-\alias{quantmodResults-class}
-\alias{show,quantmodResults-method}
+\alias{cydquantmodResults-class}
+\alias{show,cydquantmodResults-method}
 
-\alias{quantmodReturn-class}
+\alias{cydquantmodReturn-class}
 
 \alias{tradeLog-class}
 \alias{show,tradeLog-method}
 
-\title{Class "quantmod" }
-\description{   Objects of class \code{quantmod} help to 
-manage the process of model building within the quantmod
+\title{Class "cydquantmod" }
+\description{   Objects of class \code{cydquantmod} help to 
+manage the process of model building within the cydquantmod
 package.  Created automatically by a call to \code{specifyModel}
 they carry information to be used by a variety of accessor
 functions and methods.
 }
 \section{Objects from the Class}{
-Objects can be created by calls of the form \code{new("quantmod", ...)}.
+Objects can be created by calls of the form \code{new("cydquantmod", ...)}.
 
 Normally objects are created as a result of a call to \code{specifyModel}.
 }
@@ -41,14 +41,14 @@ Normally objects are created as a result of a call to \code{specifyModel}.
     \item{\code{build.date}:}{Object of class \code{"Date"} ~~ }
     \item{\code{fitted.model}:}{Object of class \code{"ANY"} ~~ }
     \item{\code{model.data}:}{Object of class \code{"zoo"} ~~ }
-    \item{\code{quantmod.version}:}{Object of class \code{"numeric"} ~~ }
+    \item{\code{cydquantmod.version}:}{Object of class \code{"numeric"} ~~ }
   }
 }
 \section{Methods}{
-No methods defined with class "quantmod" in the signature.
+No methods defined with class "cydquantmod" in the signature.
 }
 \author{ Jeffrey A. Ryan }
 \examples{
-showClass("quantmod")
+showClass("cydquantmod")
 }
 \keyword{classes}

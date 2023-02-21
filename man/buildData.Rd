@@ -18,7 +18,7 @@ the formula assigned to the remaining columns. }
   \item{return.class}{ one of "zoo","data.frame","ts","timeSeries" }
 }
 \details{
-Makes available for use \emph{outside} the \pkg{quantmod} workflow a dataset
+Makes available for use \emph{outside} the \pkg{cydquantmod} workflow a dataset
 of appropriately transformed variables, using the same mechanism
 underlying \code{specifyModel}. Offers the ability to apply transformations
 to raw data using a common formula mechanism, without having to explicitly

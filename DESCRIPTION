@@ -1,4 +1,4 @@
-Package: quantmod
+Package: cydquantmod
 Type: Package
 Title: Quantitative Financial Modelling Framework
 Version: 0.4.20.2
@@ -16,5 +16,5 @@ Suggests: DBI,RMySQL,RSQLite,timeSeries,xml2,downloader,jsonlite(>= 1.1)
 Description: Specify, build, trade, and analyse quantitative financial trading strategies.
 LazyLoad: yes
 License: GPL-3
-URL: http://www.quantmod.com https://github.com/joshuaulrich/quantmod
-BugReports: https://github.com/joshuaulrich/quantmod/issues
+URL: http://www.cydquantmod.com https://github.com/joshuaulrich/cydquantmod
+BugReports: https://github.com/joshuaulrich/cydquantmod/issues

@@ -1,7 +1,7 @@
 "updateModel" <-
-function(fitted.model,quantmod) {
-   quantmod@model.inputs <- fitted.model@model.inputs;
-   quantmod@fitted.model <- fitted.model;
-   return(quantmod);
+function(fitted.model,cydquantmod) {
+   cydquantmod@model.inputs <- fitted.model@model.inputs;
+   cydquantmod@fitted.model <- fitted.model;
+   return(cydquantmod);
 }
 

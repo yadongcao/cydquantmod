@@ -402,7 +402,7 @@ function(x,k=1)
     colnames(new.x) <- "Next"
     return(new.x)
 }
-`Next.quantmod.OHLC` <-
+`Next.cydquantmod.OHLC` <-
 function(x,k=1)
 {
     if(k<0||k!=as.integer(k)||length(k)>1) stop("k must be a non-negative integer")
@@ -413,7 +413,7 @@ function(x,k=1)
     colnames(new.x) <- "Next"
     return(new.x)
 }
-`Next.zoo` <- Next.quantmod.OHLC
+`Next.zoo` <- Next.cydquantmod.OHLC
 `Next.numeric` <-
 function(x,k=1)
 {
@@ -441,7 +441,7 @@ function(x,k=1)
     colnames(new.x) <- paste("Lag.",k,sep="")
     return(new.x)
 }
-`Lag.quantmod.OHLC` <-
+`Lag.cydquantmod.OHLC` <-
 function(x,k=1)
 {
     new.x <- sapply(as.list(k), function(k.e) {
@@ -460,7 +460,7 @@ function(x,k=1)
     colnames(new.x) <- paste("Lag.",k,sep="")
     return(new.x)
 }
-`Lag.zoo` <- `Lag.xts` <- Lag.quantmod.OHLC
+`Lag.zoo` <- `Lag.xts` <- Lag.cydquantmod.OHLC
 
 `Lag.numeric` <-
 function(x,k=1)

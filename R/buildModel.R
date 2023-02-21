@@ -1,12 +1,12 @@
 `bM` <-
 function(x,FUN,subset,...) {
-    if(!is.quantmod(x)) stop('x must be a quantmod object')
+    if(!is.cydquantmod(x)) stop('x must be a cydquantmod object')
 
     FUN <- as.character(paste("buildModel.",deparse(substitute(FUN)),sep=''))
 
     training.data <- x@model.data[subset]
 
-    mcall <- do.call(FUN,list(quantmod=x,training.data=training.data, ...))
+    mcall <- do.call(FUN,list(cydquantmod=x,training.data=training.data, ...))
 
     x@fitted.model <- mcall$fitted
     x@model.inputs <- as.character(mcall$inputs)
@@ -44,7 +44,7 @@ function(x,method,training.per,...) {
     method <- as.character(paste("buildModel.",method,sep=''));
     training.data <- model.data[training.dates];
     formula <- x@model.formula
-    mcall <- do.call(method,list(quantmod=x,training.data=training.data, ...));
+    mcall <- do.call(method,list(cydquantmod=x,training.data=training.data, ...));
     x@fitted.model <- mcall$fitted;
     x@model.inputs <- as.character(mcall$inputs);
     x@build.date = as.character(Sys.time());

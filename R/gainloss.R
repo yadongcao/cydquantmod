@@ -1,5 +1,5 @@
 "plotGainLoss" <- function(x,last.n.days=60) {
-  if(is.quantmodResults(x)) x <- modelSignal(x)
+  if(is.cydquantmodResults(x)) x <- modelSignal(x)
   ms <- x[(NROW(x)-last.n.days):NROW(x),]
   plwd <- 3
   val.range <- sd(ms[,1])*3

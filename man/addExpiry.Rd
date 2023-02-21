@@ -13,7 +13,7 @@ addExpiry(type = "options", lty = "dotted")
   \item{lty}{ type of lines to draw }
 }
 \details{
-See options.expiry and futures.expiry in \pkg{quantmod}
+See options.expiry and futures.expiry in \pkg{cydquantmod}
 for details and limitations.
 }
 \value{

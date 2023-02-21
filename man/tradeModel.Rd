@@ -1,8 +1,8 @@
 \name{tradeModel}
 \alias{tradeModel}
-\title{ Simulate Trading of Fitted quantmod Object }
+\title{ Simulate Trading of Fitted cydquantmod Object }
 \description{
-Simulated trading of fitted quantmod object.  Given a fitted model, 
+Simulated trading of fitted cydquantmod object.  Given a fitted model, 
 tradeModel calculates the signal generated over a given historical
 period, then applies specified \code{trade.rule} to calculate
 and return a \code{tradeLog} object.  Additional methods can then 
@@ -21,7 +21,7 @@ tradeModel(x,
 }
 %- maybe also 'usage' for other objects documented here.
 \arguments{
-  \item{x}{ a quantmod object from \code{buildModel}  }
+  \item{x}{ a cydquantmod object from \code{buildModel}  }
   \item{signal.threshold}{ a numeric vector describing simple lower
                            and upper thresholds before trade occurs}
   \item{leverage}{ amount of leverage to apply - currently a constant }
@@ -46,7 +46,7 @@ Any suggestions as to inclusions or alterations are appreciated and should
 be directed to the maintainer of the package.
 }
 \value{
-A quantmodResults object
+A cydquantmodResults object
 }
 \author{ Jeffrey A. Ryan }
 \seealso{  \code{\link{specifyModel}} \code{\link{buildModel}} }

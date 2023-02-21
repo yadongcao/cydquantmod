@@ -1,14 +1,14 @@
-\name{quantmod.OHLC}
-\alias{quantmod.OHLC}
-\alias{as.quantmod.OHLC}
-\alias{quantmod.OHLC}
+\name{cydquantmod.OHLC}
+\alias{cydquantmod.OHLC}
+\alias{as.cydquantmod.OHLC}
+\alias{cydquantmod.OHLC}
 \title{ Create Open High Low Close Object }
 \description{
 Coerce an object with the apporpriate columns to class
-\code{quantmod.OHLC}, which extends zoo.
+\code{cydquantmod.OHLC}, which extends zoo.
 }
 \usage{
-as.quantmod.OHLC(x,
+as.cydquantmod.OHLC(x,
                  col.names = c("Open", "High",
                                "Low", "Close",
                                "Volume", "Adjusted"),
@@ -22,15 +22,15 @@ as.quantmod.OHLC(x,
   \item{\dots}{ additional arguments (unused) }
 }
 \details{
-\code{quantmod.OHLC} is actually just a renaming of an object
+\code{cydquantmod.OHLC} is actually just a renaming of an object
 of class \code{zoo}, with the convention of NAME.Open, NAME.High, ...
 for the column names.
 
 Additionally methods may be written to handle or check for the above conditions
-within other functions - as is the case within the \pkg{quantmod} package.
+within other functions - as is the case within the \pkg{cydquantmod} package.
 }
 \value{
-An object of class c('quantmod.OHLC','zoo')
+An object of class c('cydquantmod.OHLC','zoo')
 }
 \author{ Jeffrey A. Ryan }
 \seealso{ \code{\link{OHLC.Transformations}}, \code{\link{getSymbols}} }

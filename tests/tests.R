@@ -1,8 +1,8 @@
-av.key <- Sys.getenv("QUANTMOD_AV_API_KEY")
-tiingo.key <- Sys.getenv("QUANTMOD_TIINGO_API_KEY")
-test.web.endpoints <- Sys.getenv("QUANTMOD_TEST_WEB_ENDPOINTS")
+av.key <- Sys.getenv("cydquantmod_AV_API_KEY")
+tiingo.key <- Sys.getenv("cydquantmod_TIINGO_API_KEY")
+test.web.endpoints <- Sys.getenv("cydquantmod_TEST_WEB_ENDPOINTS")
 
-# Call as.zoo before quantmod is loaded and registers its S3 method
+# Call as.zoo before cydquantmod is loaded and registers its S3 method
 dc <- c("2015-01-01", "2016-01-01", "2017-01-01")
 dd <- as.Date(dc)
 
@@ -18,9 +18,9 @@ zz.r.date <- zoo::as.zoo(r, order.by = dd)
 zz.r.char <- zoo::as.zoo(r, order.by = dc)
 zz.r <- zoo::as.zoo(r)
 
-library(quantmod)
+library(cydquantmod)
 
-### quantmod:::as.zoo.data.frame
+### cydquantmod:::as.zoo.data.frame
 
 # should be the same as zoo:::as.zoo.data.frame when order.by is provided
 stopifnot(identical(zz.f.char, as.zoo(f, order.by = dc)))
@@ -32,11 +32,11 @@ if (nzchar(test.web.endpoints)) {
   # should throw an error
   errorKey <- "d116c846835e633aacedb1a31959dd2724cd67b8"
   x <- try(
-           quantmod::getSymbols("AAPL", src = "tiingo", data.type = "csv", api.key = errorKey)
+           cydquantmod::getSymbols("AAPL", src = "tiingo", data.type = "csv", api.key = errorKey)
            , silent = TRUE)
   stopifnot(inherits(x, "try-error"))
   x <- try(
-           quantmod::getSymbols("AAPL", src = "tiingo", data.type = "json", api.key = errorKey)
+           cydquantmod::getSymbols("AAPL", src = "tiingo", data.type = "json", api.key = errorKey)
            , silent = TRUE)
   stopifnot(inherits(x, "try-error"))
 

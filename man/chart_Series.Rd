@@ -21,7 +21,7 @@ Experimental Charting Version 2
 }
 \description{
 These are experimental functions for a new version of chartSeries
-in quantmod. Interface, behavior, and functionality will change.
+in cydquantmod. Interface, behavior, and functionality will change.
 }
 \usage{
 chart_Series(x,

@@ -9,7 +9,7 @@ function(x, thresh=0) {
 }
 
 peak <- function(x) {
-  .Deprecated("findPeaks", package="quantmod")
+  .Deprecated("findPeaks", package="cydquantmod")
   findPeaks(x)
 }
 
@@ -24,6 +24,6 @@ function(x, thresh=0) {
 }
 
 valley <- function(x) {
-  .Deprecated("findValleys", package="quantmod")
+  .Deprecated("findValleys", package="cydquantmod")
   findValleys(x)
 }

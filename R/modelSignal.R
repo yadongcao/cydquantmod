@@ -1,7 +1,7 @@
 "modelSignal" <-
 function(x)
 {
-  if(!is.quantmodResults(x)) stop(paste(dQuote("x"),"must be of class",
-                                  dQuote("quantmodResults")))
+  if(!is.cydquantmodResults(x)) stop(paste(dQuote("x"),"must be of class",
+                                  dQuote("cydquantmodResults")))
   x@signal
 }

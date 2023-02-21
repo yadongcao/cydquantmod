@@ -42,7 +42,7 @@ The individual methods make use of \code{getSymbols} to
 load the data.  This requires a corresponding
 getSymbols method.
 
-Internally, attachSymbols makes use of quantmod's unexported
+Internally, attachSymbols makes use of cydquantmod's unexported
 create.bindings to dynamically create active
 bindings to each symbol listed in the DDB object. 
 

@@ -32,7 +32,7 @@ charts is via \code{setDefaults}. See the examples.
 }
 \value{
 Called for its side-effect of setting the default
-TA arguments to quantmod's charting functions.
+TA arguments to cydquantmod's charting functions.
 }
 \author{ Jeffrey A. Ryan }
 \note{ 
